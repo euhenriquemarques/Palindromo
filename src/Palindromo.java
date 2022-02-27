@@ -4,7 +4,7 @@ public class Palindromo {
 
 		String a = "hellolleh";
 		String b = "henrique";
-		palindromo(a)
+		palindromo(b);
 	}
 
 	public static void palindromo(String palavra) {
@@ -15,13 +15,11 @@ public class Palindromo {
 			char entrada = nova.charAt(i);
 			char saida = nova.charAt((nova.length() - i) - 1);
 			
-			if (entrada == saida) {
-				System.out.println("YES, " + entrada + ", " + saida);
-			} else {
-				System.out.println("NO, " + entrada + ", " + saida);
+			if (entrada != saida) {
+				System.out.println("NO" );
+				return;
 			}
-
 		}
-
+		System.out.println("YES" );
 	}
 }
