@@ -4,18 +4,16 @@ public class Palindromo {
 
 		String a = "hellolleh";
 		String b = "henrique";
-		palindromo(b);
+		palindromo(a);
 	}
 
 	public static void palindromo(String palavra) {
 
-		String nova = palavra.toLowerCase();
+		StringBuilder nova = new  StringBuilder(palavra.toLowerCase());
 
-		for (int i = 0; i < nova.length(); i++) {
-			char entrada = nova.charAt(i);
-			char saida = nova.charAt((nova.length() - i) - 1);
+		for (int i = 0; i < nova.length()/2; i++) {
 			
-			if (entrada != saida) {
+			if (nova.charAt(i) != nova.reverse().charAt(i)) {
 				System.out.println("NO" );
 				return;
 			}
