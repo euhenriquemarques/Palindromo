@@ -7,17 +7,26 @@ public class Palindromo {
 		palindromo(a);
 	}
 
+//	public static void palindromo(String palavra) {
+//
+//		StringBuilder nova = new  StringBuilder(palavra.toLowerCase());
+//
+//		for (int i = 0; i < nova.length()/2; i++) {
+//			if (nova.charAt(i) != nova.reverse().charAt(i)) {
+//				System.out.println("NO" );
+//				return;
+//			}
+//		}
+//		System.out.println("YES" );
+//	}
+
 	public static void palindromo(String palavra) {
+		StringBuilder nova = new StringBuilder(palavra.toLowerCase());
 
-		StringBuilder nova = new  StringBuilder(palavra.toLowerCase());
-
-		for (int i = 0; i < nova.length()/2; i++) {
-			
-			if (nova.charAt(i) != nova.reverse().charAt(i)) {
-				System.out.println("NO" );
-				return;
-			}
+		if (!palavra.toLowerCase().equals(nova.reverse().toString())) {
+			System.out.println("NO");
+			return;
 		}
-		System.out.println("YES" );
+		System.out.println("YES");
 	}
 }
